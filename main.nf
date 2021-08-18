@@ -41,6 +41,8 @@ ch_reference_tar_gz = Channel.value(file(params.reference_tar_gz))
 // Define Process
 process step_1 {
     tag "step1"
+    container 'quay.io/repository/lifebitai/ubuntu:18.10'
+
     script:
     """
     echo `date`
